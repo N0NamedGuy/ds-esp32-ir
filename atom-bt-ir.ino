@@ -3,6 +3,7 @@
 #include "infrared.h"
 //#include "bluetooth.h"
 #include "http.h"
+#include "button.h"
 
 void setup() {
   Serial.begin(115200);
@@ -12,6 +13,7 @@ void setup() {
   initIr();
   //initBluetooth();
   initHttp();
+  initButton();
 
   Serial.flush();
   delay(50);
@@ -23,6 +25,7 @@ void loop() {
 
   handleLed();
   handleHttp();
+  handleButton();
   //handleIr();
   //recvIr();
 }

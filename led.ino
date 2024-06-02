@@ -86,6 +86,8 @@ void setLedState(const LEDStatus state) {
     pixels.show();
     break;
   case LED_OFF:
+    pixels.setPixelColor(0, pixels.Color(0, 0, 0));
+    pixels.show();
     pixels.clear();
     break;
   case LED_ERROR:
